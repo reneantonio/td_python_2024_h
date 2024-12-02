@@ -18,11 +18,12 @@ class Comentario(models.Model):
     def __str__(self):
         return f"Comentario de {self.nombre_usuario} para {self.hotel.nombre}"
 
-class Atributo():
+class Atributo(models.Model):
     nombre = models.CharField(max_length=255)  
+    def __str__(self):
+        return self.nombre
 
-
-class Atributo_Hotel():
+class Atributo_Hotel(models.Model):
     hotel = models.ForeignKey(Hotel, related_name="atributos", on_delete=models.CASCADE)
     atributo = models.ForeignKey(Atributo, related_name="atributos_hoteles", on_delete=models.CASCADE)
     valor_atributo = models.CharField(max_length=255)

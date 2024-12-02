@@ -1,0 +1,55 @@
+[
+    {
+        "model": "hoteles.hotel",
+        "pk": 1,
+        "fields": {
+            "nombre": "Hotel Tierra Sur",
+            "descripcion": "Somo un hotel de la tierra del sur.",
+            "calificacion": "0.0",
+            "cant_votos": 0,
+            "direccion": "Av Siempre viva 123,Temuco"
+        }
+    },
+    {
+        "model": "hoteles.comentario",
+        "pk": 1,
+        "fields": {
+            "hotel": 1,
+            "nombre_usuario": "rene",
+            "comentario": "Buen hotel, rico desayuno",
+            "fecha": "2024-12-02T22:22:30.807Z"
+        }
+    },
+    {
+        "model": "hoteles.atributo",
+        "pk": 1,
+        "fields": {
+            "nombre": "Wifi"
+        }
+    },
+    {
+        "model": "hoteles.atributo",
+        "pk": 2,
+        "fields": {
+            "nombre": "Tinaja"
+        }
+    },
+    {
+        "model": "hoteles.atributo_hotel",
+        "pk": 1,
+        "fields": {
+            "hotel": 1,
+            "atributo": 1,
+            "valor_atributo": "Gratis"
+        }
+    },
+    {
+        "model": "hoteles.atributo_hotel",
+        "pk": 2,
+        "fields": {
+            "hotel": 1,
+            "atributo": 2,
+            "valor_atributo": "No"
+        }
+    }
+]
